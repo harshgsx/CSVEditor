@@ -29,6 +29,7 @@ namespace CSVEditor
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ofdLoadFile = new System.Windows.Forms.OpenFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -37,7 +38,7 @@ namespace CSVEditor
             this.cbDropdown = new System.Windows.Forms.ComboBox();
             this.btnStringReplace = new System.Windows.Forms.Button();
             this.lblFileName = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnLoadfile = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
@@ -68,7 +69,7 @@ namespace CSVEditor
             this.panel2.Controls.Add(this.cbDropdown);
             this.panel2.Controls.Add(this.btnStringReplace);
             this.panel2.Controls.Add(this.lblFileName);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnLoadfile);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -131,18 +132,18 @@ namespace CSVEditor
             this.lblFileName.TabIndex = 3;
             this.lblFileName.Text = "File : ";
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button2.BackgroundImage = global::CSVEditor.Properties.Resources.save;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(815, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 46);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSave.BackgroundImage = global::CSVEditor.Properties.Resources.save;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSave.Location = new System.Drawing.Point(815, 56);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(48, 46);
+            this.btnSave.TabIndex = 2;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSaveCliked);
             // 
             // btnLoadfile
             // 
@@ -180,8 +181,9 @@ namespace CSVEditor
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(985, 450);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "CSVEditor";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -201,7 +203,7 @@ namespace CSVEditor
         private System.Windows.Forms.ComboBox cbDropdown;
         private System.Windows.Forms.Button btnStringReplace;
         private System.Windows.Forms.Label lblFileName;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnLoadfile;
         private System.Windows.Forms.Button btnSaveAs;
         private System.Windows.Forms.PictureBox pbLoading;
