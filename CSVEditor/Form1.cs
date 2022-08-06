@@ -321,5 +321,10 @@ namespace CSVEditor
                 cbDropdown.Items.Add("--ERROR--");
             }
         }
+
+        private void cbDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnCbIndex.Text = cbDropdown.SelectedIndex.ToString();
+        }
     }
 }

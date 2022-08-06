@@ -41,6 +41,7 @@ namespace CSVEditor
             this.btnSave = new System.Windows.Forms.Button();
             this.btnLoadfile = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnCbIndex = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoading)).BeginInit();
@@ -64,6 +65,7 @@ namespace CSVEditor
             // 
             this.panel2.AutoSize = true;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel2.Controls.Add(this.btnCbIndex);
             this.panel2.Controls.Add(this.pbLoading);
             this.panel2.Controls.Add(this.btnSaveAs);
             this.panel2.Controls.Add(this.cbDropdown);
@@ -109,6 +111,7 @@ namespace CSVEditor
             this.cbDropdown.Name = "cbDropdown";
             this.cbDropdown.Size = new System.Drawing.Size(215, 24);
             this.cbDropdown.TabIndex = 5;
+            this.cbDropdown.SelectedIndexChanged += new System.EventHandler(this.cbDropdown_SelectedIndexChanged);
             // 
             // btnStringReplace
             // 
@@ -128,7 +131,7 @@ namespace CSVEditor
             this.lblFileName.AutoSize = true;
             this.lblFileName.Location = new System.Drawing.Point(407, 22);
             this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Size = new System.Drawing.Size(42, 17);
+            this.lblFileName.Size = new System.Drawing.Size(38, 16);
             this.lblFileName.TabIndex = 3;
             this.lblFileName.Text = "File : ";
             // 
@@ -175,6 +178,15 @@ namespace CSVEditor
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseEnter);
             this.dataGridView1.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseEnter);
             // 
+            // btnCbIndex
+            // 
+            this.btnCbIndex.Location = new System.Drawing.Point(234, 70);
+            this.btnCbIndex.Name = "btnCbIndex";
+            this.btnCbIndex.Size = new System.Drawing.Size(75, 29);
+            this.btnCbIndex.TabIndex = 8;
+            this.btnCbIndex.Text = "0";
+            this.btnCbIndex.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -208,6 +220,7 @@ namespace CSVEditor
         private System.Windows.Forms.Button btnSaveAs;
         private System.Windows.Forms.PictureBox pbLoading;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnCbIndex;
     }
 }
 
